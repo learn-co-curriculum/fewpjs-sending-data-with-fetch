@@ -438,8 +438,9 @@ browser to gain access to your `submitData` function in console.
 
 **Note**: The tests in this lab need access to the `fetch()` request inside
 `submitData`. In order to give them access, write your solution so that
-`submitData` _returns_ the `fetch()`. This will not change the behavior of
-your `fetch()`.
+`submitData` _returns_ the `fetch()`. You can do this by simply adding the
+`return` keyword in front of the `fetch()` request. This will not change the
+behavior of your `fetch()`.
 
 ### Test 1 - Send Data
 
@@ -476,13 +477,6 @@ add a `catch()`.
 When writing the callback function for your `catch()`, expect to receive an
 object on error with a property, `message`, containing info about what went
 wrong. Write code to append this message to the DOM when `catch()` is called.
-
-### Test 4 - Return the Fetch Chain
-
-An amazing feature of `fetch()` is that if you _return_ it, _other_ functions
-can tack on _their own_ `then()` and `catch()` calls. While we won't explore
-this amazing idea in this lesson, let's learn good habits and be sure to return
-the `fetch()` chain from our `submitData` function.
 
 ## Conclusion
 
