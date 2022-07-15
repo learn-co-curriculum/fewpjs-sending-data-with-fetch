@@ -1,6 +1,6 @@
 // Add your code here
 function submitData(name, email){
-    return fetch('http://localhost:3000/users', {
+    return fetch("http://localhost:3000/users", {
         method: "POST",
         headers:{
             "Content-Type": "application/json",
@@ -16,7 +16,7 @@ function submitData(name, email){
     })
     .then(function(object){
         const p = document.createElement("p");
-        p.innerText = object.id;
+        p.innerHTML = object.id;
         document.body.appendChild(p);
         console.log(object);
     })
